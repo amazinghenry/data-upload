@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Amazing Dojo, We love to design and develop digital contents"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/amazingdojo-favicon.png">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- bootstrap -->
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawesome -->
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap" rel="stylesheet">
+    <!-- google font -->
+
+    <!-- owl-carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <!-- owl carousel -->
+	<link rel="stylesheet" href="./styles.css">
+	<title>Student Classes</title>
+</head>
+<body>
+	<nav class="container-fluid nav-bg">
+		<a href="https://amazingdojo.xyz">
+			<img src="./assets/amazingdojo-logo.svg"  alt ="amazingdojo logo" class="img-fluid">
+		</a>
+	</nav>
+	<header></header>
+		<h1>Student Classes</h1>
+	<main>
+		<div class="student-group">
+		</div>
+		<div class="form-container container">
+			<h3> Register New Data</h3>
+		<form id="studentform">
+			<input type="text" id="fname" name="firstname" placeholder="Enter first name" required/>
+			<input type="text" id="lname" name="lastname" placeholder="Enter last name" required/>
+			<select name="section" id="section">
+				<option value="#">choose section</option>
+				<option value="art">Art</option>
+				<option value="commercial">Commercial</option>
+				<option value="science">Science</option>
+			</select>
+			<select name="class" id="class">
+				<option value="#">choose difficulty</option>
+				<option value="novice">novice</option>
+				<option value="regular">regular</option>
+				<option value="professional">professional</option>
+			</select>
+			<input type="number" id="age" name="age" placeholder="Enter age" required/>
+			<input type="submit" value="submit details">
+		</form>
+		</div>
+	</main>
+	<footer class="container-fluid">
+        <div class="container">
+            <div class="footer-group">
+                <div class="footer-item">
+                    <a href="https://amazingdojo.xyz">
+                        <img src="./assets/amazingdojo-icon.svg" class="img-fluid"/>
+                    </a>
+                </div>
+                <div class="footer-item social">
+                    <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter fa-2x"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                </div>
+                <div class="footer-item">
+                    <p>Designed & Developed by Henry Adodo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+<script>
+const firebaseConfig = {
+    apiKey: "AIzaSyDA6YT5y_VOK80ZJLkmfXyBqR1L-iK9IUM",
+    authDomain: "amazing-javascript.firebaseapp.com",
+    projectId: "amazing-javascript",
+    storageBucket: "amazing-javascript.appspot.com",
+    messagingSenderId: "255392151833",
+    appId: "1:255392151833:web:1afa66868b6ff585b2ed88",
+    measurementId: "G-1S5GCSXE96"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    </script>
+
+<script src="./script.js"></script>
+</body>
+</html>
